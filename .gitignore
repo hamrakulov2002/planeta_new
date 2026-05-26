@@ -1,0 +1,8 @@
+# Сборка и бинарники .NET
+[Bb]in/
+[Oo]bj/
+
+# Rider и VS кэш
+.rider/
+.idea/
+*.user
