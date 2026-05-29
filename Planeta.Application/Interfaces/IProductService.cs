@@ -10,7 +10,9 @@ public interface IProductService
     
     Task UpdateProductAsync(int productId, UpdateProductDto productDto);
     
-    Task<ProductDto> AddAsync(CreateProductDto createProductDto);
+    Task<int> AddAsync(CreateProductRequest request);
+
+    Task UploadImagesAsync(int productId, UploadProductImagesRequest request);
     
     Task DeleteAsync(int productId);
 }

@@ -4,6 +4,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace Planeta.Infrastructure.Migrations
 {
     /// <inheritdoc />
@@ -139,12 +141,12 @@ namespace Planeta.Infrastructure.Migrations
                 name: "RolePermission",
                 columns: table => new
                 {
-                    PermissionsId = table.Column<int>(type: "integer", nullable: false),
-                    RolesId = table.Column<int>(type: "integer", nullable: false)
+                    RolesId = table.Column<int>(type: "integer", nullable: false),
+                    PermissionsId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RolePermission", x => new { x.PermissionsId, x.RolesId });
+                    table.PrimaryKey("PK_RolePermission", x => new { x.RolesId, x.PermissionsId });
                     table.ForeignKey(
                         name: "FK_RolePermission_Permissions_PermissionsId",
                         column: x => x.PermissionsId,
@@ -232,6 +234,39 @@ namespace Planeta.Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Permissions",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "products.import" },
+                    { 2, "users.manage" },
+                    { 3, "reports.view" },
+                    { 4, "products.manage" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Roles",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Manager" },
+                    { 2, "Admin" },
+                    { 3, "Seller" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "RolePermission",
+                columns: new[] { "PermissionsId", "RolesId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 2, 1 },
+                    { 3, 1 },
+                    { 4, 1 },
+                    { 4, 3 }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_OrderItems_OrderId",
                 table: "OrderItems",
@@ -263,9 +298,9 @@ namespace Planeta.Infrastructure.Migrations
                 column: "PhoneOptionsId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RolePermission_RolesId",
+                name: "IX_RolePermission_PermissionsId",
                 table: "RolePermission",
-                column: "RolesId");
+                column: "PermissionsId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_Email",

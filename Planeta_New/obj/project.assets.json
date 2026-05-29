@@ -3827,32 +3827,40 @@
     ]
   },
   "packageFolders": {
-    "/Users/khojiakbar/.nuget/packages/": {}
+    "C:\\Users\\hamra\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/khojiakbar/Desktop/planeta_new/Planeta_New/Planeta_New.csproj",
+      "projectUniqueName": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\Planeta_New.csproj",
       "projectName": "Planeta_New",
-      "projectPath": "/Users/khojiakbar/Desktop/planeta_new/Planeta_New/Planeta_New.csproj",
-      "packagesPath": "/Users/khojiakbar/.nuget/packages/",
-      "outputPath": "/Users/khojiakbar/Desktop/planeta_new/Planeta_New/obj/",
+      "projectPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\Planeta_New.csproj",
+      "packagesPath": "C:\\Users\\hamra\\.nuget\\packages\\",
+      "outputPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/khojiakbar/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\hamra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/Users/khojiakbar/Desktop/planeta_new/Planeta.Infrastructure/Planeta.Infrastructure.csproj": {
-              "projectPath": "/Users/khojiakbar/Desktop/planeta_new/Planeta.Infrastructure/Planeta.Infrastructure.csproj"
+            "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Planeta.Infrastructure.csproj": {
+              "projectPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Planeta.Infrastructure.csproj"
             }
           }
         }
@@ -3860,6 +3868,12 @@
       "warningProperties": {
         "warnAsError": [
           "NU1605"
+        ],
+        "warnNotAsError": [
+          "NU1901",
+          "NU1902",
+          "NU1903",
+          "NU1904"
         ]
       },
       "restoreAuditProperties": {
@@ -3867,7 +3881,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net10.0": {
@@ -3913,7 +3927,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.201/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

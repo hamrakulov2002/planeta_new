@@ -9,5 +9,7 @@ public interface IUserRepository
     Task<User?> GetUserByIdWithRolesAsync(int id);
     Task AddAsync(User user);
     Task<bool> CheckExistingEmailAsync(string email);
+    Task<int> GetRoleIdByNameAsync(string rolename);
+    Task<IEnumerable<User>> GetUsersAsync();
     Task SaveChangesAsync();
 }

@@ -42,20 +42,51 @@ public class ProductController : ControllerBase
         return Ok(product);
     }
 
-    
-    
-    
+
+
+
     [HttpPost]
-    [Route("/api/createproduct")]
-    public async Task<ActionResult<ProductDto>> CreateAsync([FromBody] CreateProductDto createProductDto)
+    [Route("/api/createpproduct")]
+    public async Task<IActionResult> CreateProduct([FromBody] CreateProductRequest request)
     {
-        var result = await _productService.AddAsync(createProductDto);
-        
-        return Ok(result);
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+
+        // 1. Создаем продукт в базе и получаем его ID
+        int productId = await _productService.AddAsync(request);
+    
+        // 2. Формируем URL для следующего шага (загрузки картинок)
+        // Это создаст строку вида: /api/product/28/images
+        var uploadImagesUrl = Url.Action(nameof(UploadImages), new { productId = productId });
+
+        // 3. Возвращаем статус 201 Created. 
+        // Он автоматически добавит заголовок Location и вернет JSON с ID для фронтенда
+        return Created(uploadImagesUrl, new 
+        { 
+            ProductId = productId, 
+            NextStep = uploadImagesUrl,
+            Message = "Продукт успешно создан. Перенаправление на загрузку изображений." 
+        });
     }
 
-    [HttpPut]
-    [Route("api/updateproduct/{productId}")]
+    [HttpPost("{productId}/images")]
+    public async Task<IActionResult> UploadImages(int productId, [FromForm] UploadProductImagesRequest request)
+    {
+        try
+        {
+            await _productService.UploadImagesAsync(productId, request);
+            return Ok(new { message = "Product is uploaded successfully" });
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound( new  { message = e.Message });
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, new { message = "Error to save images" });
+        }
+    }
+    
+    [HttpPut("{productId}")]
     public async Task<ActionResult<UpdateProductDto>> UpdateProduct(int productId, [FromBody] UpdateProductDto updateProductDto)
     {
         try
@@ -69,6 +100,13 @@ public class ProductController : ControllerBase
             return NotFound(e.Message);
         }
         
+    }
+
+    [HttpDelete("{productId}")]
+    public async Task<IActionResult> DeleteProduct(int productId)
+    {
+         await _productService.DeleteAsync(productId);
+         return  Ok(new { message = "Product is deleted successfully" });
     }
     
 }

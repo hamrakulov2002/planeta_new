@@ -52,4 +52,21 @@ public class UserRepository : IUserRepository
     {
         await _dbContext.SaveChangesAsync();
     }
+
+    public async Task<int> GetRoleIdByNameAsync(string rolename)
+    {
+        var role = await _dbContext.Roles.FirstOrDefaultAsync(r => r.Name == rolename);
+
+        if(role == null)
+        {
+            throw new Exception($"Role with name '{rolename}' not found.");
+        }
+
+        return role.Id;
+    }
+
+    public async Task<IEnumerable<User>> GetUsersAsync()
+    {
+        return await _dbContext.Users.ToListAsync();
+    }
 }

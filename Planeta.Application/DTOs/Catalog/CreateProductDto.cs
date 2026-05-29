@@ -10,7 +10,8 @@ public record CreateProductDto(
     int? BrandId,
     bool IsUsed,
     string? Imei,
-    PhoneOptionsDto? PhoneOptions,
     int StockQuantity,
     string mainImageUrl,
-    List<string> ImageUrls);
+    List<string> ImageUrls,
+    List<ProductAttributeInputDto> Attributes 
+);

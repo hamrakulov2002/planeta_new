@@ -2,18 +2,16 @@ using Planeta.Application.DTOs.PhoneOptions;
 
 namespace Planeta.Application.DTOs.Catalog;
 
-public record UpdateProductDto
-(
-    int Id,                        // ID обязателен, чтобы сверить его с маршрутом
+public record UpdateProductDto(
     string Name,
     string Description,
     decimal Price,
     int CategoryId,
     int? BrandId,
     bool IsUsed,
-    string? Imei,                  // Может быть null для аксессуаров
+    string? Imei,
     int StockQuantity,
-    PhoneOptionsDto? PhoneOptions, // DTO опций памяти/аккумулятора
-    string? MainImageUrl,
-    List<string> ImageUrls    
-    );
+    string MainImageUrl,
+    List<string> ImageUrls,
+    List<ProductAttributeInputDto> Attributes 
+);

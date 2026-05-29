@@ -24,4 +24,6 @@ public class Product
     public virtual Category Category { get; set; } = null!;
 
     public virtual ICollection<ProductImage> Images { get; set; } = new List<ProductImage>();
+    
+    public virtual ICollection<ProductAttributeValue> AttributeValues { get; set; } = new List<ProductAttributeValue>();
 }

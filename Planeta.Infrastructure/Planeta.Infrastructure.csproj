@@ -4,6 +4,7 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+		<WarningsNotAsErrors>NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,6 +20,10 @@
     <ItemGroup>
       <ProjectReference Include="..\Planeta.Application\Planeta.Application.csproj" />
       <ProjectReference Include="..\Planeta.Domain\Planeta.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Migrations\" />
     </ItemGroup>
 
 </Project>

@@ -22,21 +22,6 @@ namespace Planeta.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("PermissionRole", b =>
-                {
-                    b.Property<int>("PermissionsId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("RolesId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("PermissionsId", "RolesId");
-
-                    b.HasIndex("RolesId");
-
-                    b.ToTable("RolePermission", (string)null);
-                });
-
             modelBuilder.Entity("Planeta.Domain.Auth.Permission", b =>
                 {
                     b.Property<int>("Id")
@@ -52,6 +37,28 @@ namespace Planeta.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Permissions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "products.import"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "users.manage"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "reports.view"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "products.manage"
+                        });
                 });
 
             modelBuilder.Entity("Planeta.Domain.Auth.Role", b =>
@@ -69,6 +76,28 @@ namespace Planeta.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Manager"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Admin"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Seller"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Customer"
+                        });
                 });
 
             modelBuilder.Entity("Planeta.Domain.Auth.User", b =>
@@ -110,6 +139,27 @@ namespace Planeta.Infrastructure.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Planeta.Domain.Entities.Attribute", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Attributes", (string)null);
                 });
 
             modelBuilder.Entity("Planeta.Domain.Entities.Brand", b =>
@@ -285,6 +335,33 @@ namespace Planeta.Infrastructure.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("Planeta.Domain.Entities.ProductAttributeValue", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AttributeId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AttributeId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductAttributeValues", (string)null);
+                });
+
             modelBuilder.Entity("Planeta.Domain.Entities.ProductImage", b =>
                 {
                     b.Property<int>("Id")
@@ -310,19 +387,66 @@ namespace Planeta.Infrastructure.Migrations
                     b.ToTable("ProductImages");
                 });
 
-            modelBuilder.Entity("PermissionRole", b =>
+            modelBuilder.Entity("RolePermission", b =>
                 {
-                    b.HasOne("Planeta.Domain.Auth.Permission", null)
-                        .WithMany()
-                        .HasForeignKey("PermissionsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("RolesId")
+                        .HasColumnType("integer");
 
-                    b.HasOne("Planeta.Domain.Auth.Role", null)
-                        .WithMany()
-                        .HasForeignKey("RolesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("PermissionsId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("RolesId", "PermissionsId");
+
+                    b.HasIndex("PermissionsId");
+
+                    b.ToTable("RolePermission", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            RolesId = 2,
+                            PermissionsId = 1
+                        },
+                        new
+                        {
+                            RolesId = 2,
+                            PermissionsId = 2
+                        },
+                        new
+                        {
+                            RolesId = 2,
+                            PermissionsId = 3
+                        },
+                        new
+                        {
+                            RolesId = 2,
+                            PermissionsId = 4
+                        },
+                        new
+                        {
+                            RolesId = 1,
+                            PermissionsId = 1
+                        },
+                        new
+                        {
+                            RolesId = 1,
+                            PermissionsId = 2
+                        },
+                        new
+                        {
+                            RolesId = 1,
+                            PermissionsId = 3
+                        },
+                        new
+                        {
+                            RolesId = 1,
+                            PermissionsId = 4
+                        },
+                        new
+                        {
+                            RolesId = 3,
+                            PermissionsId = 4
+                        });
                 });
 
             modelBuilder.Entity("Planeta.Domain.Auth.User", b =>
@@ -378,6 +502,25 @@ namespace Planeta.Infrastructure.Migrations
                     b.Navigation("PhoneOptions");
                 });
 
+            modelBuilder.Entity("Planeta.Domain.Entities.ProductAttributeValue", b =>
+                {
+                    b.HasOne("Planeta.Domain.Entities.Attribute", "Attribute")
+                        .WithMany()
+                        .HasForeignKey("AttributeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Planeta.Domain.Entities.Product", "Product")
+                        .WithMany("AttributeValues")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Attribute");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Planeta.Domain.Entities.ProductImage", b =>
                 {
                     b.HasOne("Planeta.Domain.Entities.Product", "Product")
@@ -387,6 +530,21 @@ namespace Planeta.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("RolePermission", b =>
+                {
+                    b.HasOne("Planeta.Domain.Auth.Permission", null)
+                        .WithMany()
+                        .HasForeignKey("PermissionsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Planeta.Domain.Auth.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RolesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Planeta.Domain.Auth.Role", b =>
@@ -411,6 +569,8 @@ namespace Planeta.Infrastructure.Migrations
 
             modelBuilder.Entity("Planeta.Domain.Entities.Product", b =>
                 {
+                    b.Navigation("AttributeValues");
+
                     b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
