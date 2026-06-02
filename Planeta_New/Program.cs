@@ -1,3 +1,7 @@
+using System.Runtime.CompilerServices;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Planeta_New.Extensions;
 using Planeta.Infrastructure.Extensions;
 using Planeta.Application.ApplicationExtensions;
@@ -5,13 +9,38 @@ using Planeta.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
+        };
+    });
+
+builder.Services.AddAuthorization();
+
+
 
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 
 builder.Services.AddControllers();
+builder.Services.AddPlanetaSwagger();
 
-builder.Services.AddSwaggerExtension();
+builder.Services.AddPlanetaCors();
+
+//builder.Services.AddSwaggerExtension();
 
 
 var app = builder.Build();
@@ -33,20 +62,24 @@ var app = builder.Build();
 }*/
 
 
-app.MapControllers();
 
 
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    
 }
 
 app.UseHttpsRedirection();
 
+app.UseStaticFiles();
+
+app.UseCors("PlanetaOpenCorsPolicy");
+/*app.UseSwagger();
+app.UseSwaggerUI();*/
+
+app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapControllers();
 app.UseSwaggerExtension();
-
-
-
 app.Run();

@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization; // Обязательно добавляем этот using
+using Microsoft.AspNetCore.Mvc;
 using Planeta.Application.DTOs.Catalog;
 using Planeta.Application.Interfaces;
 using Planeta.Domain.Entities;
 
 namespace Planeta_New.Controllers;
 
-
 [ApiController]
+[Route("api/products")] // Базовый роут для всех продуктов
 public class ProductController : ControllerBase
 {
     private readonly IProductService _productService;
@@ -15,8 +16,8 @@ public class ProductController : ControllerBase
         _productService = productService;
     }
 
+    // GET: api/products
     [HttpGet]
-    [Route("/api/products")]
     public async Task<ActionResult<IEnumerable<ProductDto>>> GetAllAsync(
         [FromQuery] int? categoryId,
         [FromQuery] int? brandId,
@@ -24,42 +25,30 @@ public class ProductController : ControllerBase
     {
         var products = await _productService.GetCatalogAsync(categoryId, brandId, isUsed);
         return Ok(products);
-        
     }
 
-
-    [HttpGet]
-    [Route("/api/products/{productId}")]
+    // GET: api/products/{productId}
+    [HttpGet("{productId}")]
     public async Task<ActionResult<ProductDto>> GetByIdAsync(int productId) 
     {
         var product = await _productService.GetByIdAsync(productId);
-        
         if (product == null)
         {
             return NotFound($"Product with id {productId} not found");
         }
-        
         return Ok(product);
     }
 
-
-
-
+    // POST: api/products
     [HttpPost]
-    [Route("/api/createpproduct")]
+    [Authorize(Roles = "Admin,Manager")]
     public async Task<IActionResult> CreateProduct([FromBody] CreateProductRequest request)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
-        // 1. Создаем продукт в базе и получаем его ID
         int productId = await _productService.AddAsync(request);
-    
-        // 2. Формируем URL для следующего шага (загрузки картинок)
-        // Это создаст строку вида: /api/product/28/images
         var uploadImagesUrl = Url.Action(nameof(UploadImages), new { productId = productId });
 
-        // 3. Возвращаем статус 201 Created. 
-        // Он автоматически добавит заголовок Location и вернет JSON с ID для фронтенда
         return Created(uploadImagesUrl, new 
         { 
             ProductId = productId, 
@@ -68,7 +57,9 @@ public class ProductController : ControllerBase
         });
     }
 
+    // POST: api/products/{productId}/images
     [HttpPost("{productId}/images")]
+    [Authorize(Roles = "Admin,Manager")]
     public async Task<IActionResult> UploadImages(int productId, [FromForm] UploadProductImagesRequest request)
     {
         try
@@ -86,27 +77,28 @@ public class ProductController : ControllerBase
         }
     }
     
+    // PUT: api/products/{productId}
     [HttpPut("{productId}")]
+    [Authorize(Roles = "Admin,Manager")]
     public async Task<ActionResult<UpdateProductDto>> UpdateProduct(int productId, [FromBody] UpdateProductDto updateProductDto)
     {
         try
         {
             await _productService.UpdateProductAsync(productId, updateProductDto);
-
             return Ok(new { message = "Product is updated successfully" });
         }
         catch (Exception e)
         {
             return NotFound(e.Message);
         }
-        
     }
 
+    // DELETE: api/products/{productId}
     [HttpDelete("{productId}")]
+    [Authorize(Roles = "Admin,Manager")]
     public async Task<IActionResult> DeleteProduct(int productId)
     {
          await _productService.DeleteAsync(productId);
-         return  Ok(new { message = "Product is deleted successfully" });
+         return Ok(new { message = "Product is deleted successfully" });
     }
-    
 }

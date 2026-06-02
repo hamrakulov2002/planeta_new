@@ -4,16 +4,16 @@ namespace Planeta_New.Extensions;
 
 public static class AddSwaggerDoc
 {
-    public static IServiceCollection AddSwaggerExtension(this IServiceCollection services)
+    /*public static IServiceCollection AddSwaggerExtension(this IServiceCollection services)
     {
         services.AddEndpointsApiExplorer();
         
         services.AddSwaggerGen( c => 
             c.SwaggerDoc("v1", new OpenApiInfo{Title ="Planetaa",  Version ="v1"}));
         return services;
-    }
+    }*/
 
-    public static IApplicationBuilder UseSwaggerExtension(this IApplicationBuilder app)
+    /*public static IApplicationBuilder UseSwaggerExtension(this IApplicationBuilder app)
     {
         app.UseSwagger();
 
@@ -26,6 +26,6 @@ public static class AddSwaggerDoc
         );
 
         return app;
-    }
+    }*/
     
 }
