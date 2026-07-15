@@ -1,26 +1,31 @@
 {
   "version": 2,
-  "dgSpecHash": "P4ONSymmSaI=",
+  "dgSpecHash": "4eFvHvUXJx0=",
   "success": true,
   "projectFilePath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hamra\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\hamra\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\hamra\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.8\\microsoft.extensions.configuration.abstractions.10.0.8.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.8\\microsoft.extensions.dependencyinjection.abstractions.10.0.8.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\10.0.8\\microsoft.extensions.diagnostics.abstractions.10.0.8.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\10.0.8\\microsoft.extensions.fileproviders.abstractions.10.0.8.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\10.0.8\\microsoft.extensions.hosting.abstractions.10.0.8.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.8\\microsoft.extensions.logging.abstractions.10.0.8.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\microsoft.extensions.options\\10.0.8\\microsoft.extensions.options.10.0.8.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.8\\microsoft.extensions.primitives.10.0.8.nupkg.sha512"
+    "C:\\Users\\hamra\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\10.0.8\\microsoft.extensions.hosting.abstractions.10.0.8.nupkg.sha512"
   ],
   "logs": [
     {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.Extensions.Hosting.Abstractions не будет урезано. Рассмотрите возможность удаления этого пакета из зависимостей, так как он, вероятно, не требуется.",
+      "projectPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
+      "libraryId": "Microsoft.Extensions.Hosting.Abstractions",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
       "code": "NU1903",
       "level": "Warning",
-      "message": "Package 'AutoMapper' 12.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
+      "message": "У пакета \"AutoMapper\" 12.0.1 есть известная уязвимость https://github.com/advisories/GHSA-rvv3-g6hj-g44x (уровень серьезности: высокий уровень)",
       "projectPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
       "warningLevel": 1,
       "filePath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",

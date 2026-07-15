@@ -4,5 +4,9 @@ namespace Planeta.Application.Interfaces;
 
 public interface IOrderService
 {
-    Task<int> CreateOrderAsync(CreateOrderRequest request);
+    Task<int> CreateOrderAsync(string? userId, CreateOrderRequest request);
+    
+    Task<IEnumerable<OrderDto>> GetOrdersByUserIdAsync(string userId);
+    
+    Task<IEnumerable<OrderDto>> GetAllOrdersAsync();
 }

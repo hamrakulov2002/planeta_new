@@ -182,13 +182,6 @@ D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Planet
 D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Planeta.Infrastructure.pdb
 D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Planeta.Application.dll
 D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Planeta.Domain.dll
-D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Microsoft.AspNetCore.Hosting.Abstractions.dll
-D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Microsoft.AspNetCore.Http.Features.dll
-D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
-D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Microsoft.AspNetCore.Http.Abstractions.dll
-D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Microsoft.Extensions.Features.dll
-D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Microsoft.Net.Http.Headers.dll
-D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Microsoft.AspNetCore.Connections.Abstractions.dll
 D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Planeta.Application.pdb
 D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\bin\Debug\net10.0\Planeta.Domain.pdb
 D:\Dev\RiderProjects\Planeta_New\Planeta.Infrastructure\obj\Debug\net10.0\Planeta.Infrastructure.csproj.AssemblyReference.cache

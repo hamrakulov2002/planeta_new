@@ -9,7 +9,7 @@ public static class CorsExtensions
             options.AddPolicy("PlanetaOpenCorsPolicy", builder =>
             {
                 builder
-                    .WithOrigins("http://localhost:5173")
+                    .WithOrigins("https://planetakg.netlify.app")
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();

@@ -61,6 +61,15 @@ public class BrandController : ControllerBase
         return Ok(brand);
     }
 
+    [HttpGet("/api/brands/category/{categoryId:int}")]
+    public async Task<ActionResult> GetAllBrands(int categoryId)
+    {
+        var brands = await _brandService.GetBrandsByCategoryAsync(categoryId);
+        
+        return Ok(brands);
+    }
+    
+
     // Только для Админов и Менеджеров
     [HttpDelete]
     [Route("/api/brand/{id}")]

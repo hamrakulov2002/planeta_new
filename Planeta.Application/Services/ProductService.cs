@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Planeta.Application.DTOs.Catalog;
+using Planeta.Application.DTOs.Common;
 using Planeta.Application.Interfaces;
 using Planeta.Domain.Entities;
 using Planeta.Domain.Interfaces;
+
 
 namespace Planeta.Application.Services;
 
@@ -22,6 +24,154 @@ public class ProductService : IProductService
         _productRepository = productRepository;
         _mapper = mapper;
         _webHostEnvironment = webHostEnvironment;
+    }
+
+    /*public async Task<PagedResult<ProductDto>> GetAllProductAsync(int? categoryId, int? brandId, bool? IsUsed,
+        string? search,
+        int? pageNumber, int? pageSize)
+    {
+        int validPageNumber = pageNumber ?? 1;
+        int validPageSize = pageSize ?? 10;
+
+
+        if (validPageNumber < 1) validPageNumber = 1;
+        if (validPageSize < 1) validPageSize = 10;
+
+
+        var query = _productRepository.GetQueryable();
+
+
+        if (categoryId.HasValue)
+        {
+            query = query.Where(product => product.CategoryId == categoryId);
+        }
+
+        if (brandId.HasValue)
+        {
+            query = query.Where(product => product.BrandId == brandId);
+        }
+
+        if (IsUsed.HasValue)
+        {
+            query = query.Where(product => product.IsUsed == IsUsed);
+        }
+
+        int totalCount = query.Count();
+
+        var paginatedQuery = query
+            .OrderByDescending(product => product.Id)
+            .Skip((validPageNumber - 1) * validPageSize)
+            .Take(validPageSize);
+
+        var products = await _productRepository.ToListAsync(paginatedQuery);
+
+        var producttDtos = _mapper.Map<IEnumerable<ProductDto>>(products);
+
+        return new  PagedResult<ProductDto>(producttDtos, totalCount, validPageNumber, validPageSize);
+
+    }*/
+
+    public async Task<PagedResult<ProductDto>> GetAllProductAsync(int? categoryId, int? brandId, bool? IsUsed,
+        string? search, int? pageNumber, int? pageSize)
+    {
+        int validPageNumber = pageNumber ?? 1;
+        int validPageSize = pageSize ?? 10;
+
+        if (validPageNumber < 1) validPageNumber = 1;
+        if (validPageSize < 1) validPageSize = 10;
+
+        var query = _productRepository.GetQueryable();
+
+        if (categoryId.HasValue)
+        {
+            query = query.Where(product => product.CategoryId == categoryId);
+        }
+
+        if (brandId.HasValue)
+        {
+            query = query.Where(product => product.BrandId == brandId);
+        }
+
+        if (IsUsed.HasValue)
+        {
+            query = query.Where(product => product.IsUsed == IsUsed);
+        }
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            var lowerSearch = search.ToLower().Trim();
+
+            // ЖЕСТКОЕ ПРАВИЛО: Исключаем сами телефоны/смартфоны из выдачи рекомендаций
+            if (validPageSize == 6)
+            {
+                query = query.Where(product =>
+                    !product.Category.Name.ToLower().Contains("телефон") &&
+                    !product.Category.Name.ToLower().Contains("смартфон")
+                );
+            }
+
+            // 1. Слова для мягкого поиска универсальных гаджетов (например, "iphone", "15")
+            var searchWords = lowerSearch.Split(new[] { ' ', ',', '-', '/' }, StringSplitOptions.RemoveEmptyEntries)
+                .Where(word => word.Length > 2)
+                .Where(word => word != "pro" && word != "max" && word != "ultra" && word != "plus")
+                .ToList();
+
+            // 2. Ищем типы разъемов в названии телефона
+            var connectorKeywords = new List<string> { "usb-c", "usb c", "lightning", "micro usb", "type-c", "type c" };
+            var foundConnectors = connectorKeywords.Where(c => lowerSearch.Contains(c)).ToList();
+
+            query = query.Where(product =>
+                // Базовый поиск по названию/описанию
+                product.Name.ToLower().Contains(lowerSearch) ||
+                (product.Description != null && product.Description.ToLower().Contains(lowerSearch)) ||
+
+                // Проверка по характеристикам
+                product.AttributeValues.Any(av =>
+                    // А. Для ЧЕХЛОВ и СТЁКОЛ — проверяем СТРОГОЕ вхождение модели
+                    ((product.Category.Name.ToLower().Contains("чехол") ||
+                      product.Category.Name.ToLower().Contains("стекл") ||
+                      product.Category.Name.ToLower().Contains("пленк"))
+                        ? (av.Attribute.Name.ToLower() == "совместимость" && lowerSearch.Contains(av.Value.ToLower()))
+
+                        // Б. Для ОСТАЛЬНЫХ (Повербанки) — мягкий поиск по словам ("Apple", "Samsung")
+                        : (searchWords.Any(word => av.Value.ToLower().Contains(word)) ||
+                           searchWords.Any(word => word.Contains(av.Value.ToLower())))
+                    ) ||
+
+                    // В. Проверка одинаковых разъёмов (Кабели, Зарядки)
+                    // ТЕПЕРЬ С ДОПОЛНИТЕЛЬНОЙ ПРОВЕРКОЙ: 
+                    // Зарядка подходит по разъёму ТОЛЬКО ЕСЛИ у неё в совместимости НЕТ противоречащих моделей 
+                    // (то есть либо совместимость пустая/универсальная, либо содержит открытую модель телефона)
+                    ((av.Attribute.Name.ToLower() == "тип разъёма" || av.Attribute.Name.ToLower() == "тип разъема") &&
+                     (foundConnectors.Any(c => av.Value.ToLower().Contains(c)) ||
+                      av.Value.ToLower().Contains("usb-c") || av.Value.ToLower().Contains("type-c")) &&
+
+                     // Проверяем, что у этого товара нет полей "совместимость", которые НЕ содержат имя нашего телефона
+                     !product.AttributeValues.Any(subAv =>
+                             subAv.Attribute.Name.ToLower() == "совместимость" &&
+                             !lowerSearch.Contains(subAv.Value
+                                 .ToLower()) && // Текст телефона не содержит эту модель (например, iPhone 15 не содержит iphone 14 pro)
+                             (subAv.Value.ToLower().Contains("iphone") ||
+                              subAv.Value.ToLower().Contains("galaxy")) // Проверяем только конкретные модели
+                     )
+                    )
+                )
+            );
+        }
+        // ==============================================================================
+
+        int totalCount = query.Count();
+
+        var paginatedQuery = query
+            .OrderByDescending(product => product.Id)
+            .Skip((validPageNumber - 1) * validPageSize)
+            .Take(validPageSize);
+
+        var products = await _productRepository.ToListAsync(paginatedQuery);
+
+        var producttDtos = _mapper.Map<IEnumerable<ProductDto>>(products);
+
+        return new PagedResult<ProductDto>(producttDtos, totalCount, validPageNumber, validPageSize);
     }
 
     public async Task<IEnumerable<ProductDto>> GetCatalogAsync(int? categoryId, int? brandId, bool? IsUsed)
@@ -93,7 +243,7 @@ public class ProductService : IProductService
         // Возвращаем ID созданного продукта, чтобы фронтенд знал, куда загружать фото
         return product.Id;
     }
-    
+
     public async Task UploadImagesAsync(int productId, UploadProductImagesRequest request)
     {
         // Проверяем, существует ли вообще такой продукт
@@ -110,11 +260,11 @@ public class ProductService : IProductService
         if (request.MainImage != null && request.MainImage.Length > 0)
         {
             string dbImagePath = await SaveFileAsync(request.MainImage, uploadFolder);
-            productImages.Add(new ProductImage 
-            { 
-                ProductId = productId, 
-                ImagePath = dbImagePath, 
-                IsMain = true 
+            productImages.Add(new ProductImage
+            {
+                ProductId = productId,
+                ImagePath = dbImagePath,
+                IsMain = true
             });
         }
 
@@ -125,11 +275,11 @@ public class ProductService : IProductService
             {
                 if (file.Length == 0) continue;
                 string dbImagePath = await SaveFileAsync(file, uploadFolder);
-                productImages.Add(new ProductImage 
-                { 
-                    ProductId = productId, 
-                    ImagePath = dbImagePath, 
-                    IsMain = false 
+                productImages.Add(new ProductImage
+                {
+                    ProductId = productId,
+                    ImagePath = dbImagePath,
+                    IsMain = false
                 });
             }
         }
@@ -141,6 +291,31 @@ public class ProductService : IProductService
             await _productRepository.SaveChangesAsync();
         }
     }
+
+    public async Task<IEnumerable<ProductDto>> GetCompatibleProductsAsync(int productId)
+    {
+        // 1. Запрашиваем из репозитория сам товар
+        var currentProduct = await _productRepository.GetByIdAsync(productId);
+        if (currentProduct == null) return Enumerable.Empty<ProductDto>();
+
+        // 2. Модель телефона — это просто его Name (по договорённости с фронтом/админкой)
+        var phoneName = currentProduct.Name;
+
+        // 3. Достаём типы разъёмов телефона (если это телефон с зарядкой через USB-C/Lightning)
+        var connectorTypes = currentProduct.AttributeValues
+            .Where(av => av.Attribute.Name.Equals("тип разъёма", StringComparison.OrdinalIgnoreCase)
+                         || av.Attribute.Name.Equals("тип разъема", StringComparison.OrdinalIgnoreCase))
+            .Select(av => av.Value.ToLower())
+            .ToList();
+
+        // 4. Вызываем метод репозитория, который ищет чехлы/зарядники/повербанки одним запросом
+        var compatibleProducts = await _productRepository
+            .GetCompatibleProductsByAttributesAsync(productId, phoneName, connectorTypes);
+
+        // 5. Маппим сущности в DTO и возвращаем контроллеру
+        return _mapper.Map<IEnumerable<ProductDto>>(compatibleProducts);
+    }
+
 
     public async Task UpdateProductAsync(int productId, UpdateProductDto productDto)
     {

@@ -16,15 +16,18 @@ public static class InfrastructureExtensions
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        var connectionString = configuration.GetConnectionString("DefaultConnection");
+        var connectionString = configuration.GetConnectionString("SqlServerConnection");
         
-        services.AddDbContext<PlanetaDbContext>(options =>
-            options.UseNpgsql(connectionString));
+        /*services.AddDbContext<PlanetaDbContext>(options =>
+            options.UseNpgsql(connectionString));*/
+        
+        services.AddDbContext<PlanetaDbContext>(options => options.UseSqlServer(connectionString));
 
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IBrandRepository, BrandRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
 
         services.AddScoped<IJwtProvider, JwtProvider>();
 

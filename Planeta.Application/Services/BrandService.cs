@@ -10,10 +10,12 @@ namespace Planeta.Application.Services;
 public class BrandService : IBrandService
 {
     private readonly IBrandRepository  _brandRepository;
+    private readonly IProductRepository _productRepository;
     private readonly IMapper _mapper;
 
-    public BrandService(IBrandRepository brandRepository, IMapper mapper)
+    public BrandService(IProductRepository productRepository,IBrandRepository brandRepository, IMapper mapper)
     {
+        _productRepository = productRepository;
         _brandRepository = brandRepository;
         _mapper = mapper;
     }
@@ -82,5 +84,11 @@ public class BrandService : IBrandService
         await _brandRepository.SaveChangesAsync();
         
         
+    }
+
+    public async Task<IEnumerable<BrandDto>> GetBrandsByCategoryAsync(int categoryId)
+    {
+        var brands = await _productRepository.GetBrandsByCategoryIdAsync(categoryId);
+        return _mapper.Map<IEnumerable<BrandDto>>(brands);
     }
 }

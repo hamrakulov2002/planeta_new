@@ -18,5 +18,12 @@ public interface IProductRepository
     Task<Planeta.Domain.Entities.Attribute> GetOrCreateAttributeByNameAsync(string name); // Магия EAV
     Task AddAttributeValueAsync(ProductAttributeValue attributeValue);
     Task AddImagesRangeAsync(IEnumerable<ProductImage> images);
+    Task<IEnumerable<Product>> GetCompatibleProductsByAttributesAsync(
+        int excludeProductId,
+        string phoneName,
+        List<string> connectorTypes);
+    
+    
+    Task<IEnumerable<Brand>> GetBrandsByCategoryIdAsync(int categoryId);
     Task SaveChangesAsync();
 }
