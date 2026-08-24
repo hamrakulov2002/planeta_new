@@ -11,10 +11,8 @@ public static class DbInitializer
 {
     public static async Task InitializeAsync(PlanetaDbContext context)
     {
-        // Автоматически накатит миграции, если база еще не создана
         await context.Database.MigrateAsync();
 
-        // 1. Проверяем, есть ли роли в базе данных
         if (!await context.Roles.AnyAsync())
         {
             var roles = Enum.GetValues<RolesEnum>()
@@ -28,7 +26,6 @@ public static class DbInitializer
             await context.Roles.AddRangeAsync(roles);
         }
 
-        // 2. Проверяем, есть ли права (Permissions)
         if (!await context.Permissions.AnyAsync())
         {
             var permissions = new List<Permission>
@@ -42,7 +39,6 @@ public static class DbInitializer
             await context.Permissions.AddRangeAsync(permissions);
         }
 
-        // Сохраняем всё в базу данных PostgreSQL
         await context.SaveChangesAsync();
     }
 }

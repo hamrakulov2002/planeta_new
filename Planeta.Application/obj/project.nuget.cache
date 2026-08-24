@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4eFvHvUXJx0=",
+  "dgSpecHash": "eUlB9qRy8lc=",
   "success": true,
   "projectFilePath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,7 @@
     {
       "code": "NU1510",
       "level": "Warning",
-      "message": "PackageReference Microsoft.Extensions.Hosting.Abstractions не будет урезано. Рассмотрите возможность удаления этого пакета из зависимостей, так как он, вероятно, не требуется.",
+      "message": "PackageReference Microsoft.Extensions.Hosting.Abstractions не будет урезано. Этот пакет доступен автоматически, и на него не нужно явно ссылаться. Удалите элемент PackageReference.",
       "projectPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
       "warningLevel": 1,
       "filePath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
