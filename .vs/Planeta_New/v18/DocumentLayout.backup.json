@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "D:\\Dev\\RiderProjects\\Planeta_New\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E5857534-91E6-4646-A745-5DE9349CD33F}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{E5857534-91E6-4646-A745-5DE9349CD33F}|D:\\Dev\\RiderProjects\\Planeta_New\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E5857534-91E6-4646-A745-5DE9349CD33F}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{E5857534-91E6-4646-A745-5DE9349CD33F}|solutionrelative:Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F3A858-A5D8-4A40-83B8-3A1C64F9B276}|Planeta.Application\\Planeta.Application.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta.application\\planeta.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{68F3A858-A5D8-4A40-83B8-3A1C64F9B276}|Planeta.Application\\Planeta.Application.csproj|solutionrelative:planeta.application\\planeta.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D274660C-A9F7-4AA0-833A-C775E1D6D2D0}|Planeta.Infrastructure\\Planeta.Infrastructure.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta.infrastructure\\planeta.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D274660C-A9F7-4AA0-833A-C775E1D6D2D0}|Planeta.Infrastructure\\Planeta.Infrastructure.csproj|solutionrelative:planeta.infrastructure\\planeta.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438D42ED-5E85-4757-8659-1242C46DB814}|Planeta_New\\Planeta_New.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta_new\\planeta_new.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{438D42ED-5E85-4757-8659-1242C46DB814}|Planeta_New\\Planeta_New.csproj|solutionrelative:planeta_new\\planeta_new.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438D42ED-5E85-4757-8659-1242C46DB814}|Planeta_New\\Planeta_New.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta_new\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{438D42ED-5E85-4757-8659-1242C46DB814}|Planeta_New\\Planeta_New.csproj|solutionrelative:planeta_new\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{68F3A858-A5D8-4A40-83B8-3A1C64F9B276}|Planeta.Application\\Planeta.Application.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta.application\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68F3A858-A5D8-4A40-83B8-3A1C64F9B276}|Planeta.Application\\Planeta.Application.csproj|solutionrelative:planeta.application\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,20 +39,8 @@
       "RelativeMoniker": "D:0:0:{D274660C-A9F7-4AA0-833A-C775E1D6D2D0}|Planeta.Infrastructure\\Planeta.Infrastructure.csproj|solutionrelative:planeta.infrastructure\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68F3A858-A5D8-4A40-83B8-3A1C64F9B276}|Planeta.Application\\Planeta.Application.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta.application\\planeta.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{68F3A858-A5D8-4A40-83B8-3A1C64F9B276}|Planeta.Application\\Planeta.Application.csproj|solutionrelative:planeta.application\\planeta.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E52C1056-377B-4223-84AA-A35202C19E5D}|Planeta.Domain\\Planeta.Domain.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta.domain\\planeta.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{E52C1056-377B-4223-84AA-A35202C19E5D}|Planeta.Domain\\Planeta.Domain.csproj|solutionrelative:planeta.domain\\planeta.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D274660C-A9F7-4AA0-833A-C775E1D6D2D0}|Planeta.Infrastructure\\Planeta.Infrastructure.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta.infrastructure\\planeta.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D274660C-A9F7-4AA0-833A-C775E1D6D2D0}|Planeta.Infrastructure\\Planeta.Infrastructure.csproj|solutionrelative:planeta.infrastructure\\planeta.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{438D42ED-5E85-4757-8659-1242C46DB814}|Planeta_New\\Planeta_New.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta_new\\planeta_new.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{438D42ED-5E85-4757-8659-1242C46DB814}|Planeta_New\\Planeta_New.csproj|solutionrelative:planeta_new\\planeta_new.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{438D42ED-5E85-4757-8659-1242C46DB814}|Planeta_New\\Planeta_New.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta_new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E52C1056-377B-4223-84AA-A35202C19E5D}|Planeta.Domain\\Planeta.Domain.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta.domain\\entities\\auth\\permissionsenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E52C1056-377B-4223-84AA-A35202C19E5D}|Planeta.Domain\\Planeta.Domain.csproj|solutionrelative:planeta.domain\\entities\\auth\\permissionsenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{438D42ED-5E85-4757-8659-1242C46DB814}|Planeta_New\\Planeta_New.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta_new\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{438D42ED-5E85-4757-8659-1242C46DB814}|Planeta_New\\Planeta_New.csproj|solutionrelative:planeta_new\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68F3A858-A5D8-4A40-83B8-3A1C64F9B276}|Planeta.Application\\Planeta.Application.csproj|d:\\dev\\riderprojects\\planeta_new\\planeta.application\\extensions\\applicationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,7 +142,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,33 +150,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "Planeta.Application\\Interfaces\\IProductService.cs",
-              "ToolTip": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "Planeta.Application\\Interfaces\\IProductService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAsAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T11:16:52.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IBrandRepository.cs",
-              "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Interfaces\\IBrandRepository.cs",
-              "RelativeDocumentMoniker": "Planeta.Domain\\Interfaces\\IBrandRepository.cs",
-              "ToolTip": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Interfaces\\IBrandRepository.cs",
-              "RelativeToolTip": "Planeta.Domain\\Interfaces\\IBrandRepository.cs",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "D:\\Dev\\RiderProjects\\Planeta_New\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T11:16:45.588Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-07-09T06:52:41.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "CategoryRepository.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Repositories\\CategoryRepository.cs",
               "RelativeDocumentMoniker": "Planeta.Infrastructure\\Repositories\\CategoryRepository.cs",
@@ -180,12 +171,11 @@
               "RelativeToolTip": "Planeta.Infrastructure\\Repositories\\CategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T11:16:32.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T11:16:32.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Planeta.Infrastructure.csproj",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Planeta.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Planeta.Infrastructure\\Planeta.Infrastructure.csproj",
@@ -198,7 +188,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Planeta.Application\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Planeta.Application\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T07:25:45.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "Planeta.Application\\Interfaces\\IProductService.cs",
+              "ToolTip": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "Planeta.Application\\Interfaces\\IProductService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-05T11:16:52.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Planeta.Application.csproj",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
               "RelativeDocumentMoniker": "Planeta.Application\\Planeta.Application.csproj",
@@ -211,20 +226,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Planeta_New.csproj",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\Planeta_New.csproj",
               "RelativeDocumentMoniker": "Planeta_New\\Planeta_New.csproj",
               "ToolTip": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\Planeta_New.csproj",
               "RelativeToolTip": "Planeta_New\\Planeta_New.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-05-28T14:17:23.608Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "20260528142241_InitialWithAuthSeed.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Migrations\\20260528142241_InitialWithAuthSeed.cs",
               "RelativeDocumentMoniker": "Planeta.Infrastructure\\Migrations\\20260528142241_InitialWithAuthSeed.cs",
@@ -236,20 +251,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Planeta.Application\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "Planeta.Application\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T07:25:45.122Z",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\appsettings.json",
+              "RelativeDocumentMoniker": "Planeta_New\\appsettings.json",
+              "ToolTip": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\appsettings.json",
+              "RelativeToolTip": "Planeta_New\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-26T13:21:54.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
+              "Title": "IBrandRepository.cs",
+              "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Interfaces\\IBrandRepository.cs",
+              "RelativeDocumentMoniker": "Planeta.Domain\\Interfaces\\IBrandRepository.cs",
+              "ToolTip": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Interfaces\\IBrandRepository.cs",
+              "RelativeToolTip": "Planeta.Domain\\Interfaces\\IBrandRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-05T11:16:45.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Planeta.Domain.csproj",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Planeta.Domain.csproj",
               "RelativeDocumentMoniker": "Planeta.Domain\\Planeta.Domain.csproj",
@@ -262,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Planeta_New\\Controllers\\AuthController.cs",
@@ -274,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Planeta_New.http",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\Planeta_New.http",
               "RelativeDocumentMoniker": "Planeta_New\\Planeta_New.http",
@@ -286,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "Planeta_New\\Controllers\\CategoryController.cs",
@@ -298,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "DbInitializer.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Persistence\\DbInitializer.cs",
               "RelativeDocumentMoniker": "Planeta.Infrastructure\\Persistence\\DbInitializer.cs",
@@ -310,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "RolesEnum.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Entities\\Auth\\RolesEnum.cs",
               "RelativeDocumentMoniker": "Planeta.Domain\\Entities\\Auth\\RolesEnum.cs",
@@ -322,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "PermissionsEnum.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Entities\\Auth\\PermissionsEnum.cs",
               "RelativeDocumentMoniker": "Planeta.Domain\\Entities\\Auth\\PermissionsEnum.cs",
@@ -334,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ApplicationExtensions.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Extensions\\ApplicationExtensions.cs",
               "RelativeDocumentMoniker": "Planeta.Application\\Extensions\\ApplicationExtensions.cs",
@@ -346,19 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\appsettings.json",
-              "RelativeDocumentMoniker": "Planeta_New\\appsettings.json",
-              "ToolTip": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\appsettings.json",
-              "RelativeToolTip": "Planeta_New\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-26T13:21:54.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "JwtProvider.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\JWT\\JwtProvider.cs",
               "RelativeDocumentMoniker": "Planeta.Infrastructure\\JWT\\JwtProvider.cs",
@@ -370,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "IJwtProvider.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Interfaces\\IJwtProvider.cs",
               "RelativeDocumentMoniker": "Planeta.Domain\\Interfaces\\IJwtProvider.cs",
@@ -382,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Entities\\Auth\\Role.cs",
               "RelativeDocumentMoniker": "Planeta.Domain\\Entities\\Auth\\Role.cs",
@@ -394,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Entities\\Auth\\User.cs",
               "RelativeDocumentMoniker": "Planeta.Domain\\Entities\\Auth\\User.cs",
@@ -406,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\DTOs\\Auth\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "Planeta.Application\\DTOs\\Auth\\RegisterRequest.cs",
@@ -418,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\DTOs\\Auth\\LoginRequest.cs",
               "RelativeDocumentMoniker": "Planeta.Application\\DTOs\\Auth\\LoginRequest.cs",
@@ -430,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "AuthResponse.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\DTOs\\Auth\\AuthResponse.cs",
               "RelativeDocumentMoniker": "Planeta.Application\\DTOs\\Auth\\AuthResponse.cs",
@@ -442,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "BrandService.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Services\\BrandService.cs",
               "RelativeDocumentMoniker": "Planeta.Application\\Services\\BrandService.cs",
@@ -454,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Planeta.Application\\Services\\AuthService.cs",
@@ -466,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "ProductService.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "Planeta.Application\\Services\\ProductService.cs",
@@ -478,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Mappings\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Planeta.Application\\Mappings\\MappingProfile.cs",
@@ -490,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "PlanetaDbContext.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Persistence\\PlanetaDbContext.cs",
               "RelativeDocumentMoniker": "Planeta.Infrastructure\\Persistence\\PlanetaDbContext.cs",
@@ -502,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Planeta.Infrastructure\\Repositories\\UserRepository.cs",
@@ -514,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "InfrastructureExtensions.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Extensions\\InfrastructureExtensions.cs",
               "RelativeDocumentMoniker": "Planeta.Infrastructure\\Extensions\\InfrastructureExtensions.cs",
@@ -526,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta_New\\Program.cs",
               "RelativeDocumentMoniker": "Planeta_New\\Program.cs",
