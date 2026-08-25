@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
     "net10.0": {
       "AutoMapper/12.0.1": {
@@ -4563,44 +4563,36 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hamra\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/khojiakbar/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Planeta.Infrastructure.csproj",
+      "projectUniqueName": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Infrastructure/Planeta.Infrastructure.csproj",
       "projectName": "Planeta.Infrastructure",
-      "projectPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\Planeta.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\hamra\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Infrastructure\\obj\\",
+      "projectPath": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Infrastructure/Planeta.Infrastructure.csproj",
+      "packagesPath": "/home/khojiakbar/.nuget/packages/",
+      "outputPath": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Infrastructure/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hamra\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/khojiakbar/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj": {
-              "projectPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj"
+            "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Application/Planeta.Application.csproj": {
+              "projectPath": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Application/Planeta.Application.csproj"
             },
-            "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Planeta.Domain.csproj": {
-              "projectPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Domain\\Planeta.Domain.csproj"
+            "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Domain/Planeta.Domain.csproj": {
+              "projectPath": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Domain/Planeta.Domain.csproj"
             }
           }
         }
@@ -4621,11 +4613,10 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.400"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net10.0": {
-        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": {
@@ -4667,7 +4658,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.111/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -4950,7 +4941,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "У пакета \"AutoMapper\" 12.0.1 есть известная уязвимость https://github.com/advisories/GHSA-rvv3-g6hj-g44x (уровень серьезности: высокий уровень)",
+      "message": "У пакета \"AutoMapper\" 12.0.1 есть известная уязвимость https://github.com/advisories/GHSA-rvv3-g6hj-g44x (уровень серьезности: высокий)",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net10.0"
@@ -4960,7 +4951,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-23rf-6693-g89p (уровень серьезности: высокий уровень)",
+      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-23rf-6693-g89p (уровень серьезности: высокий)",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -4970,7 +4961,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-37gx-xxp4-5rgx (уровень серьезности: высокий уровень)",
+      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-37gx-xxp4-5rgx (уровень серьезности: высокий)",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -4980,7 +4971,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-6588-8gv4-xfgh (уровень серьезности: высокий уровень)",
+      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-6588-8gv4-xfgh (уровень серьезности: высокий)",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -4990,7 +4981,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-8q5v-6pqq-x66h (уровень серьезности: высокий уровень)",
+      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-8q5v-6pqq-x66h (уровень серьезности: высокий)",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -5000,7 +4991,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-cvvh-rhrc-wg4q (уровень серьезности: высокий уровень)",
+      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-cvvh-rhrc-wg4q (уровень серьезности: высокий)",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -5010,7 +5001,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-g8r8-53c2-pm3f (уровень серьезности: высокий уровень)",
+      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-g8r8-53c2-pm3f (уровень серьезности: высокий)",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -5020,7 +5011,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-mmjf-rqrv-855v (уровень серьезности: высокий уровень)",
+      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-mmjf-rqrv-855v (уровень серьезности: высокий)",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -5030,7 +5021,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-w3x6-4m5h-cxqf (уровень серьезности: высокий уровень)",
+      "message": "У пакета \"System.Security.Cryptography.Xml\" 9.0.0 есть известная уязвимость https://github.com/advisories/GHSA-w3x6-4m5h-cxqf (уровень серьезности: высокий)",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"

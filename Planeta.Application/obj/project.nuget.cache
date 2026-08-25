@@ -1,22 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "eUlB9qRy8lc=",
+  "dgSpecHash": "YsoLHqF5eGA=",
   "success": true,
-  "projectFilePath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
+  "projectFilePath": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Application/Planeta.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\hamra\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
-    "C:\\Users\\hamra\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\10.0.8\\microsoft.extensions.hosting.abstractions.10.0.8.nupkg.sha512"
+    "/home/khojiakbar/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/home/khojiakbar/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/home/khojiakbar/.nuget/packages/bcrypt.net-next/4.1.0/bcrypt.net-next.4.1.0.nupkg.sha512",
+    "/home/khojiakbar/.nuget/packages/microsoft.extensions.hosting.abstractions/10.0.8/microsoft.extensions.hosting.abstractions.10.0.8.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1510",
       "level": "Warning",
-      "message": "PackageReference Microsoft.Extensions.Hosting.Abstractions не будет урезано. Этот пакет доступен автоматически, и на него не нужно явно ссылаться. Удалите элемент PackageReference.",
-      "projectPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
+      "message": "PackageReference Microsoft.Extensions.Hosting.Abstractions не будет урезано. Рассмотрите возможность удаления этого пакета из зависимостей, так как он, вероятно, не требуется.",
+      "projectPath": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Application/Planeta.Application.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
+      "filePath": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Application/Planeta.Application.csproj",
       "libraryId": "Microsoft.Extensions.Hosting.Abstractions",
       "targetGraphs": [
         "net10.0"
@@ -25,10 +25,10 @@
     {
       "code": "NU1903",
       "level": "Warning",
-      "message": "У пакета \"AutoMapper\" 12.0.1 есть известная уязвимость https://github.com/advisories/GHSA-rvv3-g6hj-g44x (уровень серьезности: высокий уровень)",
-      "projectPath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
+      "message": "У пакета \"AutoMapper\" 12.0.1 есть известная уязвимость https://github.com/advisories/GHSA-rvv3-g6hj-g44x (уровень серьезности: высокий)",
+      "projectPath": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Application/Planeta.Application.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Dev\\RiderProjects\\Planeta_New\\Planeta.Application\\Planeta.Application.csproj",
+      "filePath": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta.Application/Planeta.Application.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net10.0"

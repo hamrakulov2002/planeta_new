@@ -92,7 +92,6 @@ public class ProductRepository : IProductRepository
             .FirstOrDefaultAsync(p => p.Id == id);
     }
 
-    // ИСПРАВЛЕНО: Теперь новые атрибуты сохраняются мгновенно и получают валидный Id
     public async Task<Planeta.Domain.Entities.Attribute> GetOrCreateAttributeByNameAsync(string name)
     {
         var normalizedName = name.Trim();
@@ -105,8 +104,7 @@ public class ProductRepository : IProductRepository
             attribute = new Planeta.Domain.Entities.Attribute { Name = normalizedName };
             await _dbContext.Attributes.AddAsync(attribute);
 
-            // Фиксируем добавление в БД, чтобы база выдала объекту нормальный Id (например, 8, 9, 10...)
-            await _dbContext.SaveChangesAsync();
+             await _dbContext.SaveChangesAsync();
         }
 
         return attribute;
