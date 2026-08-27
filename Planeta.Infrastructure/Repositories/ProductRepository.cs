@@ -114,10 +114,6 @@ public class ProductRepository : IProductRepository
     {
         if (images == null || !images.Any()) return;
 
-        // Добавляем всю коллекцию картинок в DbSet изображений
-        //await _dbContext.Set<ProductImage>().AddRangeAsync(images);
-
-        // Если у тебя в репозитории контекст настроен напрямую на таблицу, можно так:
         await _dbContext.ProductImages.AddRangeAsync(images);
     }
 
@@ -192,6 +188,10 @@ public class ProductRepository : IProductRepository
 
     public async Task<IEnumerable<Brand>> GetBrandsByCategoryIdAsync(int categoryId)
     {
+        if(categoryId <= 0)
+        {
+            throw new ArgumentException("Invalid categoryId", nameof(categoryId));
+        }
         return await _dbContext.Products
             .Where(product => product.CategoryId == categoryId)
             .Select(product => product.Brand)

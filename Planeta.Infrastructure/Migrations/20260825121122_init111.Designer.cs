@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Planeta.Infrastructure.Persistence;
 
@@ -11,9 +12,11 @@ using Planeta.Infrastructure.Persistence;
 namespace Planeta.Infrastructure.Migrations
 {
     [DbContext(typeof(PlanetaDbContext))]
-    partial class PlanetaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260825121122_init111")]
+    partial class init111
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
