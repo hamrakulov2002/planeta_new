@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OIxha5jXO1c=",
+  "dgSpecHash": "N5v8ci5JWTk=",
   "success": true,
   "projectFilePath": "/home/khojiakbar/Desktop/Projects/planeta_new/Planeta_New/Planeta_New.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "/home/khojiakbar/.nuget/packages/azure.identity/1.14.2/azure.identity.1.14.2.nupkg.sha512",
     "/home/khojiakbar/.nuget/packages/bcrypt.net-next/4.1.0/bcrypt.net-next.4.1.0.nupkg.sha512",
     "/home/khojiakbar/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/home/khojiakbar/.nuget/packages/microsoft.aspnetcore.authentication.google/10.0.11/microsoft.aspnetcore.authentication.google.10.0.11.nupkg.sha512",
     "/home/khojiakbar/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/10.0.8/microsoft.aspnetcore.authentication.jwtbearer.10.0.8.nupkg.sha512",
     "/home/khojiakbar/.nuget/packages/microsoft.bcl.asyncinterfaces/8.0.0/microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "/home/khojiakbar/.nuget/packages/microsoft.bcl.cryptography/9.0.4/microsoft.bcl.cryptography.9.0.4.nupkg.sha512",

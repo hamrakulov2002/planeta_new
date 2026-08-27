@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "Planeta_New/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Google": "10.0.11",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.8",
           "Microsoft.EntityFrameworkCore.Design": "10.0.0",
           "Planeta.Infrastructure": "1.0.0",
@@ -75,6 +76,14 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/10.0.11": {
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "10.0.11.0",
+            "fileVersion": "10.0.1126.37416"
           }
         }
       },
@@ -1049,6 +1058,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-v/OZld8HxGa5hudLWiChuCf5asMrE36n19sR1RK5cC65SGJoYvQAcwnz3yoAOLDSw90PYc3hgFCh1FW83sakUg==",
+      "path": "microsoft.aspnetcore.authentication.google/10.0.11",
+      "hashPath": "microsoft.aspnetcore.authentication.google.10.0.11.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.8": {
       "type": "package",

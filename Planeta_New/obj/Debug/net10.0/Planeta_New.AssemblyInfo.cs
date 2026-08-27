@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("9fc1fb4e-e8e0-46cb-8fb2-79fbd24e0d18")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Planeta_New")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71696d64f017f0c0b6d8daea7372baf05b2889b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70ad58696498721bb36bd52ff750affe7f143854")]
 [assembly: System.Reflection.AssemblyProductAttribute("Planeta_New")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Planeta_New")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -858,3 +858,4 @@ D:/Dev/RiderProjects/Planeta_New/Planeta_new/bin/Debug/net10.0/publish/Planeta_N
 /home/khojiakbar/Desktop/Projects/planeta_new/Planeta_New/obj/Debug/net10.0/Planeta_New.pdb
 /home/khojiakbar/Desktop/Projects/planeta_new/Planeta_New/obj/Debug/net10.0/Planeta_New.genruntimeconfig.cache
 /home/khojiakbar/Desktop/Projects/planeta_new/Planeta_New/obj/Debug/net10.0/ref/Planeta_New.dll
+/home/khojiakbar/Desktop/Projects/planeta_new/Planeta_New/bin/Debug/net10.0/Microsoft.AspNetCore.Authentication.Google.dll
